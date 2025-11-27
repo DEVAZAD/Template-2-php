@@ -69,7 +69,7 @@
                     <h3>Our Vision</h3>
                     <p>
                         To preserve and promote the rich cultural heritage of indigenous communities through documentation, education, and community engagement, ensuring that traditional knowledge and practices are passed down to future generations. </p>
-
+                    <br>
                     <h3>Our Mission</h3>
                     <p>
                         DSCPS is committed to safeguarding indigenous knowledge, traditions, and practices through collaborative research, cultural documentation, and educational initiatives that empower communities to maintain their cultural identity. </p>
@@ -121,6 +121,9 @@
         <section class="activities section-padding" id="activities">
             <h1 class="section-title"> Activities</h1>
             <p class="title-tagline">Discover our ongoing programs and initiatives designed to preserve and promote cultural heritage.</p>
+            <a href="/pages/activities.php" class="title-tagline">
+                <p> See more Activies</p>
+            </a>
         </section>
 
         <!-- Mission Section -->
