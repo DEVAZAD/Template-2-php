@@ -21,7 +21,6 @@ body {
   color: var(--dark);
 }
 
-
 h1 {
   font-size: 2rem;
   margin-bottom: 20px;
@@ -85,7 +84,6 @@ h1 {
   min-width: 300px;
 }
 
-
 .opportunities-content p {
   margin-bottom: 20px;
 }
@@ -132,7 +130,6 @@ h1 {
   text-align: center;
 }
 
-
 .mission-content {
   flex: 1;
   min-width: 300px;
@@ -176,8 +173,6 @@ h1 {
 .focus-section {
   text-align: center;
 }
-
-
 
 .focus-section p {
   max-width: 700px;
@@ -304,15 +299,13 @@ h1 {
   }
 }
 
-
 /* ===============Animations=============== */
 
-body{
+body {
   animation: forwards;
   animation-name: fade-in;
   animation-duration: 1000ms;
   animation-timing-function: ease;
-
 }
 @keyframes fade-in {
   0% {
@@ -322,3 +315,58 @@ body{
     opacity: 1;
   }
 }
+
+/* ======================New Pages======================== */
+
+/* =====about page css===== */
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.about-section {
+  margin-bottom: 2rem;
+}
+
+.about-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.about-text {
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.team-member {
+  text-align: center;
+  padding: 1rem;
+}
+
+.member-name {
+  font-weight: bold;
+  margin: 0.5rem 0 0.2rem;
+}
+
+.member-role {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.contact-info {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+/* ==========contact page css=========== */

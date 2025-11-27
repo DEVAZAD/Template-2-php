@@ -8,13 +8,13 @@ $password = '';
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e) {
+} catch (PDOException $e) {
     die("Database connection failed: " . $e->getMessage());
 }
 
 // Check if form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
+
     // Get form data
     $name = trim($_POST['name']);
     $contact = trim($_POST['contact']);
@@ -23,35 +23,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $state = trim($_POST['state']);
     $city = trim($_POST['city']);
     $message = trim($_POST['message']);
-    
+
     // Basic validation
-    if (!empty($name) && !empty($contact) && !empty($email) && 
-        !empty($country) && !empty($state) && !empty($city) && !empty($message)) {
-        
+    if (
+        !empty($name) && !empty($contact) && !empty($email) &&
+        !empty($country) && !empty($state) && !empty($city) && !empty($message)
+    ) {
+
         try {
             // Insert into database
             $sql = "INSERT INTO contact_submissions (name, contact, email, country, state, city, message) 
                     VALUES (?, ?, ?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([$name, $contact, $email, $country, $state, $city, $message]);
-            
+
             // Redirect back to contact page with success
-            header("Location: ../pages/contact.php?success=1");
+            header("Location: /Template-2-php/index.php?success=1");
             exit;
-            
-        } catch(PDOException $e) {
+        } catch (PDOException $e) {
             // Redirect back with error
-            header("Location: ../pages/contact.php?error=1");
+            header("Location: /Template-2-php/index.php?error=1");
             exit;
         }
     } else {
         // Redirect back with error
-        header("Location: ../pages/contact.php?error=1");
+        header("Location: /Template-2-php/index.php?error=1");
         exit;
     }
 } else {
     // If someone tries to access this page directly
-    header("Location: ../pages/contact.php");
+    header("Location: /Template-2-php/index.php");
     exit;
 }
-?>

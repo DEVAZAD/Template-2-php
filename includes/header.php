@@ -3,7 +3,7 @@
         <div class="head-container  flex">
             <div class="logo">
                 <a href="/">
-                    <img src="/assets/logo.png" alt="ABCEL Logo" class="logo-img">
+                    <img src="assets/logo.png" alt="ABCEL Logo" class="logo-img">
                 </a>
             </div>
             <div class="hamburger">&#9776;</div>
