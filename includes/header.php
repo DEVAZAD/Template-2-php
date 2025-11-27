@@ -10,7 +10,8 @@
             <ul class="nav-links">
                 <li><a href="">Home</a></li>
                 <li><a href="/#about-us">About Us</a></li>
-                <li><a href="/#programs">Programs</a></li>
+                <li><a href="/#activities">Activities</a></li>
+                <li><a href="/#gallery">Gallery</a></li>
                 <li><a href="/#contact">Connect</a></li>
                 <li><a href="/pages/login.php">Login</a></li>
             </ul>

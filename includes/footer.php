@@ -10,7 +10,7 @@
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/#about-us">About Us</a></li>
-                    <li><a href="/#program">Programs</a></li>
+                    <li><a href="/#activities">Activities</a></li>
                     <li><a href="/#contact">Get Involved</a></li>
                 </ul>
             </div>
