@@ -195,6 +195,7 @@
             <div class="flex">
 
                 <div class="contact-form">
+                    <h2>Send Us a Message</h2>
 
                     <?php if (isset($_GET['success'])): ?>
                         <div class="success-message">Thank you! Your message has been sent.</div>

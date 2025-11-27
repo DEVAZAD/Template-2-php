@@ -7,8 +7,6 @@
 
 :root {
   --primary: #1a73e8;
-  --secondary: #34a853;
-  --accent: #fbbc05;
   --dark: #202124;
   --light: #ffffff;
   --gray: #5f6368;
@@ -30,7 +28,6 @@ h1 {
 
 /* Layout / Utilities */
 .container {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 150px;
 }
@@ -42,11 +39,6 @@ h1 {
 .flex {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-}
-.grid {
-  display: grid;
-  grid-column: 2;
   gap: 30px;
 }
 
@@ -340,13 +332,7 @@ h1 {
   font-size: 0.9rem;
 }
 
-/* ================== Contact Section (info block) ================== */
-
 /* ================== Contact Section ================== */
-
-.contact-us .flex {
-  align-items: flex-start;
-}
 
 /* Left side: form */
 .contact-form {
@@ -388,15 +374,13 @@ h1 {
   background: #0d62d9;
   transform: translateY(-1px);
 }
-
-/* Right side: info (you already had .contact-info base styles) */
+/* Right side: contact info */
 .contact-info {
   flex: 1;
   min-width: 220px;
   background: #f8f9fa;
   padding: 1.5rem;
   border-radius: 8px;
-  margin-top: 0; /* override old margin-top if needed */
 }
 
 /* Messages */
@@ -445,10 +429,6 @@ h1 {
 @media screen and (max-width: 900px) {
   .container {
     padding: 0 15px;
-  }
-
-  .flex {
-    flex-direction: column;
   }
 
   .opportunities-container,
