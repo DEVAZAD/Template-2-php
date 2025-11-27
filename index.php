@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="assets/headerFooter.css">
     <link rel="stylesheet" href="assets/slider.css">
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="assets/contact.css">
 </head>
 
 <body>
@@ -142,51 +141,60 @@
 
 
         <section class="about-us" id="about-us">
-            <div class="about-container">
-                <div class="about-section">
-                    <h1 class="about-title">About Our Company</h1>
-                    <p class="about-text">
-                        We are a passionate team dedicated to creating amazing web experiences.
-                        Our mission is to build solutions that make a difference in people's lives.
-                    </p>
+            <h1 class="section-title">About us</h1>
+            <div class="flex">
+                <div>
+                    <h3 class="">Our Vision</h3>
+                    <p class="">
+                        To preserve and promote the rich cultural heritage of indigenous communities through documentation, education, and community engagement, ensuring that traditional knowledge and practices are passed down to future generations. </p>
 
-                    <p class="about-text">
-                        Founded in 2024, we've been committed to excellence, innovation,
-                        and delivering outstanding results for our clients.
-                    </p>
+                    <h3 class="">Our Mission</h3>
+                    <p class="">
+                        DSCPS is committed to safeguarding indigenous knowledge, traditions, and practices through collaborative research, cultural documentation, and educational initiatives that empower communities to maintain their cultural identity. </p>
                 </div>
-
-                <div class="about-section">
-                    <h2 class="about-title">Our Mission</h2>
-                    <p class="about-text">
-                        To simplify technology and create user-friendly solutions that
-                        empower businesses and individuals to achieve their goals.
-                    </p>
-                </div>
-
-                <div class="about-section">
-                    <h2 class="about-title">Our Team</h2>
-                    <div class="team-grid">
-                        <div class="team-member">
-                            <img src="/assets/client.png" alt="">
-                            <div class="member-name">John Doe</div>
-                            <div class="member-role">Founder & CEO</div>
-                        </div>
-                        <div class="team-member">
-                            <img src="/assets/client.png" alt="">
-                            <div class="member-name">John Doe</div>
-                            <div class="member-role">Lead Developer</div>
-                        </div>
-                        <div class="team-member">
-                            <img src="/assets/client.png" alt="">
-                            <div class="member-name">Mike Johnson</div>
-                            <div class="member-role">Designer</div>
-                        </div>
+                <div class="">
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" class="lucide lucide-users h-8 w-8 mx-auto mb-4 text-primary">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                        </svg>
+                        <h4 class="">Cultural Documentation</h4>
+                        <p class="">
+                            Preserving traditional knowledge through modern documentation methods </p>
+                    </div>
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="book-open" class="lucide lucide-book-open h-8 w-8 mx-auto mb-4 text-primary">
+                            <path d="M12 7v14"></path>
+                            <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path>
+                        </svg>
+                        <h4 class="">Community Engagement</h4>
+                        <p class="">
+                            Building bridges between generations through cultural exchange </p>
+                    </div>
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="camera" class="lucide lucide-camera h-8 w-8 mx-auto mb-4 text-primary">
+                            <path d="M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z"></path>
+                            <circle cx="12" cy="13" r="3"></circle>
+                        </svg>
+                        <h4 class="">Digital Preservation</h4>
+                        <p class="">
+                            Using technology to safeguard cultural heritage for future generations </p>
+                    </div>
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="globe" class="lucide lucide-globe h-8 w-8 mx-auto mb-4 text-primary">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                            <path d="M2 12h20"></path>
+                        </svg>
+                        <h4 class="">Educational Programs</h4>
+                        <p class="">
+                            Teaching traditional knowledge and cultural practices </p>
                     </div>
                 </div>
-
-
             </div>
+
         </section>
 
         <section class="contact-us section-padding" id="contact">
