@@ -32,14 +32,33 @@ h1 {
   padding: 0 150px;
 }
 
-.section-padding {
-  padding: 60px 0;
-}
-
 .flex {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+}
+
+.section-padding {
+  padding: 80px 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2rem;
+  color: var(--dark);
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary);
 }
 
 /* ================== Idea Section ================== */
@@ -86,7 +105,7 @@ h1 {
 
 .opportunities-section {
   background-color: #f1f8ff;
-  padding: 60px 0;
+  padding: 40px;
 }
 
 .opportunities-container {
@@ -139,6 +158,9 @@ h1 {
   text-align: center;
 }
 
+.mission-container {
+  margin-top: 40px;
+}
 .mission-content {
   flex: 1;
   min-width: 300px;
