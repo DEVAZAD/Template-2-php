@@ -1,9 +1,8 @@
-/* Base Styles */
+/* ================== Base Styles ================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
 }
 
 :root {
@@ -19,6 +18,8 @@
 body {
   background-color: var(--light);
   color: var(--dark);
+  font-family: "Segoe UI", sans-serif;
+  animation: fade-in 1000ms ease forwards;
 }
 
 h1 {
@@ -27,18 +28,38 @@ h1 {
   color: var(--dark);
 }
 
+/* Layout / Utilities */
 .container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0 150px;
 }
-/* The Idea Section */
+
+.section-padding {
+  padding: 60px 0;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.grid {
+  display: grid;
+  grid-column: 2;
+  gap: 30px;
+}
+
+/* ================== Idea Section ================== */
+
 .idea-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
   margin-bottom: 40px;
 }
 
 .idea-card {
-  flex: 1;
-  min-width: 250px;
   background: var(--light);
   border-radius: 8px;
   padding: 30px;
@@ -69,19 +90,18 @@ h1 {
   line-height: 1.8;
 }
 
-/* Opportunities Section */
+/* ================== Opportunities Section ================== */
+
 .opportunities-section {
   background-color: #f1f8ff;
-  padding: 20px;
+  padding: 60px 0;
 }
 
 .opportunities-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   gap: 50px;
-}
-
-.opportunities-content {
-  flex: 1;
-  min-width: 300px;
+  align-items: center;
 }
 
 .opportunities-content p {
@@ -90,17 +110,14 @@ h1 {
 
 .opportunities-btn {
   display: inline-block;
-  width: 150px;
-  height: 50px;
-
+  padding: 0.75rem 1.5rem;
   background-color: var(--primary);
-  color: white;
+  color: #fff;
   border-radius: 4px;
-  text-align: center;
-  line-height: 50px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s;
+  text-align: center;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .opportunities-btn:hover {
@@ -109,8 +126,7 @@ h1 {
 }
 
 .opportunities-image {
-  flex: 1;
-  min-width: 300px;
+  width: 100%;
 }
 
 .image-placeholder {
@@ -125,7 +141,8 @@ h1 {
   font-size: 4rem;
 }
 
-/* Mission Section */
+/* ================== Mission Section ================== */
+
 .mission-section {
   text-align: center;
 }
@@ -134,12 +151,6 @@ h1 {
   flex: 1;
   min-width: 300px;
   text-align: left;
-}
-@media (min-width: 992px) {
-  .mission-content {
-    width: 50%;
-    padding: 20px;
-  }
 }
 
 .mission-section p {
@@ -154,8 +165,9 @@ h1 {
 }
 
 .video-placeholder {
-  width: 45%;
+  flex: 1;
   max-width: 800px;
+  min-width: 260px;
   height: 400px;
   margin: 0 auto;
   padding: 20px;
@@ -169,7 +181,8 @@ h1 {
   cursor: pointer;
 }
 
-/* Focus Section */
+/* ================== Focus Section ================== */
+
 .focus-section {
   text-align: center;
 }
@@ -191,19 +204,21 @@ h1 {
   font-size: 5rem;
 }
 
-/* Join Section */
+/* ================== Join Section ================== */
+
 .join-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
   gap: 50px;
+  align-items: center;
 }
 
 .join-image {
-  flex: 1;
-  min-width: 300px;
+  min-width: 250px;
 }
 
 .join-content {
-  flex: 2;
-  min-width: 300px;
+  min-width: 250px;
 }
 
 .join-content p {
@@ -224,14 +239,16 @@ h1 {
   font-size: 1.5rem;
 }
 
-/* News Section */
+/* ================== News Section ================== */
+
 .news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
   margin-bottom: 40px;
 }
 
 .news-card {
-  max-width: 300px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -245,7 +262,7 @@ h1 {
 
 .news-image {
   height: 200px;
-  width: auto;
+  width: 100%;
 }
 
 .newsim1 {
@@ -277,48 +294,8 @@ h1 {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 900px) {
-  .container {
-    padding: 0 15px;
-  }
-  .news-container {
-    flex-direction: column;
-    align-items: center;
-  }
+/* ================== About Section ================== */
 
-  h1 {
-    font-size: 1.8rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  p,
-  a,
-  li {
-    font-size: 1rem;
-  }
-}
-
-/* ===============Animations=============== */
-
-body {
-  animation: forwards;
-  animation-name: fade-in;
-  animation-duration: 1000ms;
-  animation-timing-function: ease;
-}
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* ======================New Pages======================== */
-
-/* =====about page css===== */
 .about-container {
   max-width: 800px;
   margin: 0 auto;
@@ -363,10 +340,138 @@ body {
   font-size: 0.9rem;
 }
 
+/* ================== Contact Section (info block) ================== */
+
+/* ================== Contact Section ================== */
+
+.contact-us .flex {
+  align-items: flex-start;
+}
+
+/* Left side: form */
+.contact-form {
+  flex: 2;
+  min-width: 280px;
+  padding: 20px;
+  background: var(--light);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font: inherit;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button {
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.contact-form button:hover {
+  background: #0d62d9;
+  transform: translateY(-1px);
+}
+
+/* Right side: info (you already had .contact-info base styles) */
 .contact-info {
+  flex: 1;
+  min-width: 220px;
   background: #f8f9fa;
   padding: 1.5rem;
   border-radius: 8px;
-  margin-top: 2rem;
+  margin-top: 0; /* override old margin-top if needed */
 }
-/* ==========contact page css=========== */
+
+/* Messages */
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 10px 12px;
+  margin: 10px 0;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 10px 12px;
+  margin: 10px 0;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* Contact responsive tweak */
+@media screen and (max-width: 900px) {
+  .contact-us .flex {
+    flex-direction: column;
+  }
+
+  .contact-info {
+    margin-top: 1.5rem;
+  }
+}
+
+/* ================== Animations ================== */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ================== Responsive ================== */
+
+@media screen and (max-width: 900px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .opportunities-container,
+  .join-container {
+    grid-template-columns: 1fr;
+  }
+
+  .video-placeholder {
+    width: 100%;
+    height: 260px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p,
+  a,
+  li {
+    font-size: 1rem;
+  }
+}

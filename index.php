@@ -218,8 +218,8 @@
                     </form>
                 </div>
                 <div class="contact-info">
+                    <h1 class="title">Contact Information</h1>
                     <div>
-
                         <h3>Get In Touch</h3>
                         <p>Email: hello@example.com</p>
                         <p>Phone: (555) 123-4567</p>
