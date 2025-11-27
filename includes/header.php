@@ -3,15 +3,15 @@
         <div class="head-container  flex">
             <div class="logo">
                 <a href="/">
-                    <img src="assets/logo.png" alt="ABCEL Logo" class="logo-img">
+                    <img src="/assets/logo.png" alt="ABCEL Logo" class="logo-img">
                 </a>
             </div>
             <div class="hamburger">&#9776;</div>
             <ul class="nav-links">
                 <li><a href="">Home</a></li>
                 <li><a href="#about-us">About Us</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#contact">Connect</a></li>
+                <li><a href="/#programs">Programs</a></li>
+                <li><a href="/#contact">Connect</a></li>
                 <li><a href="pages/login.php">Login</a></li>
             </ul>
         </div>
