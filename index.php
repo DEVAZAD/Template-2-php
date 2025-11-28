@@ -53,7 +53,7 @@
                     <h1>REALM OF CONTEMPORARY OPPORTUNITIES</h1>
                     <p>As India and the world are at the brink of change, there is a surge of contemporary opportunities for individuals and the larger ecosystem. We, the urban aspirational cohort, possess formidable potential to capitalize on these opportunities that intersect with everyday phenomena.</p>
                     <p>Let's explore the contemporary opportunities.</p>
-                    <div class="opportunities-btn">Know More</div>
+                    <div class="btn">Know More</div>
                 </div>
                 <div class="opportunities-image">
                     <div class="image-placeholder"></div>

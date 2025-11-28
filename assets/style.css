@@ -78,6 +78,22 @@ h4 {
   color: var(--gray);
   margin-bottom: 30px;
 }
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0d62d9;
+  transform: translateY(-3px);
+}
 
 /* ================== Idea Section ================== */
 
@@ -141,23 +157,6 @@ h4 {
 
 .opportunities-content p {
   margin-bottom: 20px;
-}
-
-.opportunities-btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--primary);
-  color: #fff;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  text-align: center;
-  transition: transform 0.3s, background-color 0.3s;
-}
-
-.opportunities-btn:hover {
-  background-color: #0d62d9;
-  transform: translateY(-3px);
 }
 
 .opportunities-image {
