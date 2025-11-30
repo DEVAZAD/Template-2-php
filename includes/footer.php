@@ -1,6 +1,6 @@
 <footer class="footer">
     <div class="bread-slices">
-        <div class="flex footer-container">
+        <div class="footer-container">
             <div class="footer-column">
                 <h3>ABCEL</h3>
                 <p>Transforming communities through education, empowerment, and sustainable development.</p>

@@ -56,7 +56,7 @@ a:hover {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 10;
   margin-bottom: 20px;
 }
 .logo-img {
@@ -86,12 +86,13 @@ a:hover {
 }
 
 .footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 40px;
-  margin-bottom: 40px;
+  justify-items: end;
 }
 
 .footer-column {
-  flex: 1;
   min-width: 200px;
   height: 200px;
 }
@@ -111,7 +112,7 @@ a:hover {
 }
 
 .footer-column ul li {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .footer-column ul li a {
