@@ -18,10 +18,15 @@ $page_title = "Gallery";
             color: #333;
         }
 
+        .container {
+            margin: 0 auto;
+            padding: 0 150px;
+        }
+
         .gallery-container {
 
             margin: 0 auto;
-            padding: 0 150px;
+
         }
 
         .gallery-grid {
@@ -47,42 +52,52 @@ $page_title = "Gallery";
             height: auto;
             display: block;
         }
+
+        @media screen and (max-width: 1000px) {
+            .container {
+                padding: 0 15px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <?php include('../includes/header.php'); ?>
-    <div class="gallery-container">
-        <h1 class="title">Gallery</h1>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="/assets/bann1.png" alt="Gallery Image 1" class="gallery-image">
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/money.gif" alt="Gallery Image 2" class="gallery-image">
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/bann1.png" alt="Gallery Image 3" class="gallery-image">
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/im2.jpg" alt="Gallery Image 4" class="gallery-image">
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/bann2.png" alt="Gallery Image 1" class="gallery-image">
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/tree.gif" alt="Gallery Image 2" class="gallery-image">
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/bann1.png" alt="Gallery Image 3" class="gallery-image">
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/slid1.png" alt="Gallery Image 4" class="gallery-image">
-            </div>
+    <div class="container">
 
-            <!-- Add more gallery items as needed -->
+        <div class="gallery-container">
+            <h1 class="title">Gallery</h1>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="/assets/bann1.png" alt="Gallery Image 1" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/money.gif" alt="Gallery Image 2" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/bann1.png" alt="Gallery Image 3" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/im2.jpg" alt="Gallery Image 4" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/bann2.png" alt="Gallery Image 1" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/tree.gif" alt="Gallery Image 2" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/bann1.png" alt="Gallery Image 3" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/slid1.png" alt="Gallery Image 4" class="gallery-image">
+                </div>
+
+                <!-- Add more gallery items as needed -->
+            </div>
         </div>
-        <?php include('../includes/footer.php'); ?>
+    </div>
+    <?php include('../includes/footer.php'); ?>
 </body>
 
 </html>

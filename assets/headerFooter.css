@@ -31,6 +31,8 @@ a:hover {
 .head-container {
   width: 100%;
   margin: 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .flex {
@@ -57,11 +59,20 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 10;
-  margin-bottom: 20px;
 }
-.logo-img {
-  width: 160px;
+.logo {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  width: 60px;
   height: auto;
+}
+.logo h2 {
+  font-size: 2rem;
+  color: var(--dark);
 }
 .hamburger {
   display: none;
@@ -127,14 +138,11 @@ a:hover {
 }
 
 /* Responsive Styles */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .bread-slices {
     padding: 0 20px;
   }
-  .logo-img {
-    width: 140px;
-    height: auto;
-  }
+
   .hamburger {
     display: block;
     cursor: pointer;
