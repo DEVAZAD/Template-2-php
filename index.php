@@ -208,10 +208,10 @@
         <section class="contact-us section-padding" id="contact">
             <h1 class="section-title">Contact Us</h1>
 
-            <div class="flex">
+            <div class="grid">
 
                 <div class="contact-form">
-                    <h2>Send Us a Message</h2>
+                    <h3>Send Us a Message</h3>
 
                     <?php if (isset($_GET['success'])): ?>
                         <div class="success-message">Thank you! Your message has been sent.</div>
@@ -221,7 +221,7 @@
                         <div class="error-message">There was an error. Please try again.</div>
                     <?php endif; ?>
 
-                    <form action="processes/contact_process.php" method="POST">
+                    <form action="/processes/contact_process.php" method="POST">
                         <input type="text" name="name" placeholder="Full Name" required>
                         <input type="tel" name="contact" placeholder="Phone Number" required>
                         <input type="email" name="email" placeholder="Email Address" required>
@@ -234,22 +234,39 @@
                         <button type="submit">Send Message</button>
                     </form>
                 </div>
-                <div class="contact-info">
-                    <h1 class="title">Contact Information</h1>
-                    <div>
-                        <h3>Get In Touch</h3>
-                        <p>Email: hello@example.com</p>
-                        <p>Phone: (555) 123-4567</p>
+                <div>
+                    <div class="contact-info card">
+                        <h1 class="title">Contact Information</h1>
+                        <div>
+                            <h3>Get In Touch</h3>
+                            <p>Email: hello@example.com</p>
+                            <p>Phone: (555) 123-4567</p>
+                        </div>
+                        <div>
+                            <h3>Visit Us</h3>
+                            <p>123 Main Street</p>
+                            <p>City, State, ZIP</p>
+                        </div>
                     </div>
-                    <div>
-                        <h3>Visit Us</h3>
-                        <p>123 Main Street</p>
-                        <p>City, State, ZIP</p>
+                    <div class="contact-info card">
+                        <h1 class="title">Contact Information</h1>
+                        <div>
+                            <h3>Get In Touch</h3>
+                            <p>Email: hello@example.com</p>
+                            <p>Phone: (555) 123-4567</p>
+                        </div>
+                        <div>
+                            <h3>Visit Us</h3>
+                            <p>123 Main Street</p>
+                            <p>City, State, ZIP</p>
+                        </div>
                     </div>
+
                 </div>
+
             </div>
         </section>
-        </section>
+
 
     </div>
     <!-- Footer Section -->

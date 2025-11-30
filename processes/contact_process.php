@@ -38,20 +38,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->execute([$name, $contact, $email, $country, $state, $city, $message]);
 
             // Redirect back to contact page with success
-            header("Location: /Template-2-php/index.php?success=1");
+            header("Location: /?success=1");
             exit;
         } catch (PDOException $e) {
             // Redirect back with error
-            header("Location: /Template-2-php/index.php?error=1");
+            header("Location: /?error=1");
             exit;
         }
     } else {
         // Redirect back with error
-        header("Location: /Template-2-php/index.php?error=1");
+        header("Location: /?error=1");
         exit;
     }
 } else {
     // If someone tries to access this page directly
-    header("Location: /Template-2-php/index.php");
+    header("Location: /");
     exit;
 }
