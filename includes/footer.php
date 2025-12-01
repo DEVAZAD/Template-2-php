@@ -2,7 +2,7 @@
     <div class="bread-slices">
         <div class="footer-container">
             <div class="footer-column">
-                <h3>ABCEL</h3>
+                <h3>Abcel</h3>
                 <p>Transforming communities through education, empowerment, and sustainable development.</p>
             </div>
             <div class="footer-column">

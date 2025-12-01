@@ -165,10 +165,18 @@ h4 {
   margin-bottom: 40px;
 }
 
+.team-container h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.team-container p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--gray);
+}
 .team-photo {
   width: auto;
   height: auto;
-
   border-radius: 8px;
   margin-bottom: 15px;
 }
@@ -317,12 +325,11 @@ h4 {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s;
   text-align: center;
 }
 
 .news-card:hover {
-  transform: translateY(-10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .news-image {
@@ -455,7 +462,9 @@ h4 {
   }
 
   .opportunities-container,
-  .join-container {
+  .join-container,
+  .about-us-container,
+  .contact-container {
     grid-template-columns: 1fr;
   }
 

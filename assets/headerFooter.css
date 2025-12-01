@@ -82,8 +82,8 @@ a:hover {
   height: auto;
 }
 .logo h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  font-weight: 700;
   color: var(--dark);
 }
 .hamburger {
@@ -110,9 +110,7 @@ a:hover {
 
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
-  justify-items: end;
+  grid-template-columns: auto auto auto;
 }
 
 .footer-column {
@@ -153,6 +151,9 @@ a:hover {
 @media screen and (max-width: 1000px) {
   .bread-slices {
     padding: 0 20px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
   }
 
   .hamburger {

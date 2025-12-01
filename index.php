@@ -136,22 +136,26 @@
                 <div class="card">
                     <img src="/assets/client.png" alt="" class="team-photo">
                     <h3>Alice Johnson</h3>
-                    <p>Founder & Director</p>
+                    <h4>Founder & Director</h4>
+                    <p>From Pangin Town, Shri Tasung Taki plays an important role in promoting cultural awareness and assisting in the organiza...</p>
                 </div>
                 <div class="card">
                     <img src="/assets/client.png" alt="" class="team-photo">
                     <h3>Michael Smith</h3>
-                    <p>Head of Research</p>
+                    <h4>Head of Research</h4>
+                    <p>A committed member from Komsing Village, Shri John Taki supports the society’s ongoing programs and cultural research....</p>
                 </div>
                 <div class="card">
                     <img src="/assets/client.png" alt="" class="team-photo">
                     <h3>Sophia Lee</h3>
-                    <p>Community Outreach Coordinator</p>
+                    <h4>Member</h4>
+                    <p>Representing Komsing Village, Shri Nong Tamuk assists in managing communications and documentation within the society. H...</p>
                 </div>
                 <div class="card">
                     <img src="/assets/client.png" alt="" class="team-photo">
                     <h3>David Brown</h3>
-                    <p>Digital Archivist</p>
+                    <h4>Digital Archivist</h4>
+                    <p>As the Convener from Pangin Town, Shri Jun Taki coordinates events, meetings, and cultural programs. His organizational ...</p>
                 </div>
             </div>
 
@@ -263,7 +267,7 @@
         <section class="contact-us section-padding" id="contact">
             <h1 class="section-title">Contact Us</h1>
 
-            <div class="grid">
+            <div class="grid contact-container">
 
                 <div class="contact-form">
                     <h3>Send Us a Message</h3>
