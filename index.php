@@ -44,6 +44,8 @@
                 aspirational class, and more specifically, for our focus groups. <a href="#" class="text-link">Know More</a></p>
 
         </section>
+
+        <!-- About Us Section -->
         <section class="about-us section-padding" id="about-us">
             <h1 class="section-title">About us</h1>
             <p class="title-tagline">Preserving cultural heritage through digital documentation and community engagement</p>
@@ -127,27 +129,27 @@
         </section>
 
         <!-- Team Section -->
-        <section class="team section-padding">
+        <section class="team section-padding" id="team">
             <h1 class="section-title">Meet Our Team</h1>
             <p class="title-tagline">Dedicated professionals driving our mission forward</p>
             <div class="grid team-container">
                 <div class="card">
-                    <div class="team-photo member1"></div>
+                    <img src="/assets/client.png" alt="" class="team-photo">
                     <h3>Alice Johnson</h3>
                     <p>Founder & Director</p>
                 </div>
                 <div class="card">
-                    <div class="team-photo member2"></div>
+                    <img src="/assets/client.png" alt="" class="team-photo">
                     <h3>Michael Smith</h3>
                     <p>Head of Research</p>
                 </div>
                 <div class="card">
-                    <div class="team-photo member3"></div>
+                    <img src="/assets/client.png" alt="" class="team-photo">
                     <h3>Sophia Lee</h3>
                     <p>Community Outreach Coordinator</p>
                 </div>
                 <div class="card">
-                    <div class="team-photo member4"></div>
+                    <img src="/assets/client.png" alt="" class="team-photo">
                     <h3>David Brown</h3>
                     <p>Digital Archivist</p>
                 </div>
@@ -155,8 +157,6 @@
 
 
         </section>
-
-
 
         <!-- Opportunities Section -->
         <section class="opportunities-section">
@@ -175,6 +175,7 @@
 
         </section>
 
+        <!-- Activities Section -->
         <section class="activities section-padding" id="activities">
             <h1 class="section-title"> Activities</h1>
             <p class="title-tagline">Discover our ongoing programs and initiatives designed to preserve and promote cultural heritage.</p>
@@ -203,7 +204,6 @@
             <h1 class="section-title">Impact Created So far</h1>
             <?php include 'includes/counterup.php' ?>
         </section>
-
 
         <!-- Focus Section -->
         <section class="focus-section section-padding">
@@ -259,9 +259,7 @@
 
         </section>
 
-
-
-
+        <!-- Contact Us Section -->
         <section class="contact-us section-padding" id="contact">
             <h1 class="section-title">Contact Us</h1>
 

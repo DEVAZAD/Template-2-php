@@ -56,7 +56,9 @@ a:hover {
 }
 #about-us,
 #activities,
-#contact {
+#contact,
+#team,
+#partners {
   scroll-margin-top: 50px;
 }
 
@@ -76,11 +78,12 @@ a:hover {
   gap: 10px;
 }
 .logo img {
-  width: 60px;
+  width: 40px;
   height: auto;
 }
 .logo h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
   color: var(--dark);
 }
 .hamburger {
