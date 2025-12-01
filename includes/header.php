@@ -12,6 +12,8 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/#about-us">About Us</a></li>
                 <li><a href="/#activities">Activities</a></li>
+                <li><a href="/#activities">Team</a></li>
+                <li><a href="/#activities">Partners</a></li>
                 <li><a href="/pages/gallery.php">Gallery</a></li>
                 <li><a href="/#contact">Connect</a></li>
                 <li><a href="/pages/login.php">Login</a></li>

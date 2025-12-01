@@ -44,23 +44,6 @@
                 aspirational class, and more specifically, for our focus groups. <a href="#" class="text-link">Know More</a></p>
 
         </section>
-
-        <!-- Opportunities Section -->
-        <section class="opportunities-section">
-
-            <div class="opportunities-container grid">
-                <div class="opportunities-content">
-                    <h1>REALM OF CONTEMPORARY OPPORTUNITIES</h1>
-                    <p>As India and the world are at the brink of change, there is a surge of contemporary opportunities for individuals and the larger ecosystem. We, the urban aspirational cohort, possess formidable potential to capitalize on these opportunities that intersect with everyday phenomena.</p>
-                    <p>Let's explore the contemporary opportunities.</p>
-                    <a href="#" class="btn">Know More</a>
-                </div>
-                <div class="opportunities-image">
-                    <div class="image-placeholder"></div>
-                </div>
-            </div>
-
-        </section>
         <section class="about-us section-padding" id="about-us">
             <h1 class="section-title">About us</h1>
             <p class="title-tagline">Preserving cultural heritage through digital documentation and community engagement</p>
@@ -118,6 +101,80 @@
             </div>
 
         </section>
+
+        <!-- Partners Section -->
+        <section class="partners section-padding" id="partners">
+            <h1 class="section-title">Our Partners</h1>
+            <p class="title-tagline">Collaborating with like-minded organizations to amplify our impact</p>
+            <div class="grid partners-container">
+                <div class="card">
+                    <div class="partner-logo partner1"></div>
+                    <h3>Heritage Trust</h3>
+                </div>
+                <div class="card">
+                    <div class="partner-logo partner2"></div>
+                    <h3>Cultural Connect</h3>
+                </div>
+                <div class="card">
+                    <div class="partner-logo partner3"></div>
+                    <h3>Tradition Keepers</h3>
+                </div>
+                <div class="card">
+                    <div class="partner-logo partner4"></div>
+                    <h3>Indigenous Voices</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team section-padding">
+            <h1 class="section-title">Meet Our Team</h1>
+            <p class="title-tagline">Dedicated professionals driving our mission forward</p>
+            <div class="grid team-container">
+                <div class="card">
+                    <div class="team-photo member1"></div>
+                    <h3>Alice Johnson</h3>
+                    <p>Founder & Director</p>
+                </div>
+                <div class="card">
+                    <div class="team-photo member2"></div>
+                    <h3>Michael Smith</h3>
+                    <p>Head of Research</p>
+                </div>
+                <div class="card">
+                    <div class="team-photo member3"></div>
+                    <h3>Sophia Lee</h3>
+                    <p>Community Outreach Coordinator</p>
+                </div>
+                <div class="card">
+                    <div class="team-photo member4"></div>
+                    <h3>David Brown</h3>
+                    <p>Digital Archivist</p>
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+        <!-- Opportunities Section -->
+        <section class="opportunities-section">
+
+            <div class="opportunities-container grid">
+                <div class="opportunities-content">
+                    <h1>REALM OF CONTEMPORARY OPPORTUNITIES</h1>
+                    <p>As India and the world are at the brink of change, there is a surge of contemporary opportunities for individuals and the larger ecosystem. We, the urban aspirational cohort, possess formidable potential to capitalize on these opportunities that intersect with everyday phenomena.</p>
+                    <p>Let's explore the contemporary opportunities.</p>
+                    <a href="#" class="btn">Know More</a>
+                </div>
+                <div class="opportunities-image">
+                    <div class="image-placeholder"></div>
+                </div>
+            </div>
+
+        </section>
+
         <section class="activities section-padding" id="activities">
             <h1 class="section-title"> Activities</h1>
             <p class="title-tagline">Discover our ongoing programs and initiatives designed to preserve and promote cultural heritage.</p>
