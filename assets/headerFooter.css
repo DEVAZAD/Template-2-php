@@ -58,8 +58,9 @@ a:hover {
 #activities,
 #contact,
 #team,
-#partners {
-  scroll-margin-top: 50px;
+#partners,
+#gallery {
+  scroll-margin-top: 40px;
 }
 
 /* Header Styles */

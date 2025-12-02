@@ -104,6 +104,15 @@
 
         </section>
 
+        <!-- Activities Section -->
+        <section class="activities section-padding" id="activities">
+            <h1 class="section-title"> Activities</h1>
+            <p class="title-tagline">Discover our ongoing programs and initiatives designed to preserve and promote cultural heritage.</p>
+            <a href="/pages/activities.php" class="title-tagline">
+                <p> See more Activies</p>
+            </a>
+        </section>
+
         <!-- Partners Section -->
         <section class="partners section-padding" id="partners">
             <h1 class="section-title">Our Partners</h1>
@@ -162,6 +171,17 @@
 
         </section>
 
+        <!-- Gallery Section -->
+        <section class="Gallery section-padding" id="gallery">
+            <h1 class="section-title"> Gallery</h1>
+            <p class="title-tagline">Discover our ongoing programs and initiatives designed to preserve and promote cultural heritage.</p>
+            <a href="/pages/activities.php" class="title-tagline">
+                <p> See more Gallery</p>
+            </a>
+        </section>
+
+
+
         <!-- Opportunities Section -->
         <section class="opportunities-section">
 
@@ -179,14 +199,7 @@
 
         </section>
 
-        <!-- Activities Section -->
-        <section class="activities section-padding" id="activities">
-            <h1 class="section-title"> Activities</h1>
-            <p class="title-tagline">Discover our ongoing programs and initiatives designed to preserve and promote cultural heritage.</p>
-            <a href="/pages/activities.php" class="title-tagline">
-                <p> See more Activies</p>
-            </a>
-        </section>
+
 
         <!-- Mission Section -->
         <section class="mission-section section-padding">
@@ -281,7 +294,7 @@
                     <?php endif; ?>
 
                     <form action="/processes/contact_process.php" method="POST">
-                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="text" name="name" placeholder="Your Name" required>
                         <input type="tel" name="contact" placeholder="Phone Number" required>
                         <input type="email" name="email" placeholder="Email Address" required>
 
