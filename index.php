@@ -108,8 +108,8 @@
         <section class="activities section-padding" id="activities">
             <h1 class="section-title"> Activities</h1>
             <p class="title-tagline">Discover our ongoing programs and initiatives designed to preserve and promote cultural heritage.</p>
-            <a href="/pages/activities.php" class="title-tagline">
-                <p> See more Activies</p>
+            <a href="/pages/activities.php" class="btn">
+                See more Activies
             </a>
         </section>
 
@@ -172,11 +172,11 @@
         </section>
 
         <!-- Gallery Section -->
-        <section class="Gallery section-padding" id="gallery">
+        <section class="gallery section-padding" id="gallery">
             <h1 class="section-title"> Gallery</h1>
             <p class="title-tagline">Discover our ongoing programs and initiatives designed to preserve and promote cultural heritage.</p>
-            <a href="/pages/activities.php" class="title-tagline">
-                <p> See more Gallery</p>
+            <a href="/pages/activities.php" class="btn">
+                See more Gallery
             </a>
         </section>
 
