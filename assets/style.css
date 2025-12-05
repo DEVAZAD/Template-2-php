@@ -441,7 +441,7 @@ h4 {
 }
 
 /* Contact responsive tweak */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
   .contact-us .flex {
     flex-direction: column;
   }
@@ -464,7 +464,7 @@ h4 {
 
 /* ================== Responsive ================== */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   .container {
     padding: 0 35px;
   }

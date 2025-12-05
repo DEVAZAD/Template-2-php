@@ -12,7 +12,7 @@
                 <div class="slide-content">
                     <h2>Join Our Movement</h2>
                     <p>Be part of the change that transforms lives</p>
-                    <a href="#connect" class="btn">Join Now</a>
+                    <a href="#contact" class="btn">Join Now</a>
                 </div>
             </div>
             <div class="slide">

@@ -115,6 +115,7 @@ a:hover {
 }
 
 .footer-column {
+  margin-bottom: 20px;
   min-width: 200px;
   height: 150px;
 }
@@ -149,14 +150,13 @@ a:hover {
 }
 
 /* Responsive Styles */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   .bread-slices {
     padding: 0 20px;
   }
   .footer-container {
     grid-template-columns: 1fr;
   }
-
   .hamburger {
     display: block;
     cursor: pointer;
@@ -175,5 +175,15 @@ a:hover {
 
   .nav-links li {
     margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    grid-template-columns: auto;
+    gap: 2px;
+  }
+  .logo h2 {
+    font-size: 1.2rem;
   }
 }

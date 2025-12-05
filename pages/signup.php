@@ -40,11 +40,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         try {
             $stmt = $pdo->prepare("SELECT id FROM users WHERE username = ? OR email = ?");
             $stmt->execute([$username, $email]);
-            
+
             if ($stmt->rowCount() > 0) {
                 $errors['general'] = 'Username or email already exists';
             }
-        } catch(PDOException $e) {
+        } catch (PDOException $e) {
             $errors['general'] = 'Database error: ' . $e->getMessage();
         }
     }
@@ -53,16 +53,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($errors)) {
         try {
             $password_hash = password_hash($password, PASSWORD_DEFAULT);
-            
+
             $stmt = $pdo->prepare("INSERT INTO users (username, email, password_hash) VALUES (?, ?, ?)");
             $stmt->execute([$username, $email, $password_hash]);
-            
+
             $success = 'Account created successfully! You can now <a href="login.php">login</a>.';
-            
+
             // Clear form
             $username = $email = '';
-            
-        } catch(PDOException $e) {
+        } catch (PDOException $e) {
             $errors['general'] = 'Error creating account: ' . $e->getMessage();
         }
     }
@@ -71,10 +70,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/headerFooter.css">
     <title>Sign Up</title>
     <style>
         * {
@@ -82,31 +81,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             padding: 0;
             box-sizing: border-box;
         }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #7ec1ffff;
+        }
+
         .container2 {
             margin-left: auto;
             margin-right: auto;
-            width: 40%;
             background: white;
             padding: 2rem;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 400px;
+            max-width: 600px;
         }
+
         h2 {
             text-align: center;
             margin-bottom: 1.5rem;
             color: #333;
         }
+
         .form-group {
             margin-bottom: 1rem;
         }
+
         label {
             display: block;
             margin-bottom: 0.5rem;
             color: #555;
-            font-weight: bold;
+            font-weight: 500;
         }
+
         input {
             width: 100%;
             padding: 0.75rem;
@@ -114,10 +126,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             border-radius: 4px;
             font-size: 1rem;
         }
+
         input:focus {
             outline: none;
             border-color: #007bff;
         }
+
         .btn {
             width: 100%;
             padding: 0.75rem;
@@ -129,14 +143,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             cursor: pointer;
             margin-top: 1rem;
         }
+
         .btn:hover {
             background: #0056b3;
         }
+
         .error {
             color: #dc3545;
             font-size: 0.875rem;
             margin-top: 0.25rem;
         }
+
         .success {
             color: #28a745;
             background: #d4edda;
@@ -144,19 +161,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             border-radius: 4px;
             margin-bottom: 1rem;
         }
+
         .login-link {
             text-align: center;
             margin-top: 1rem;
         }
+
+        .home-link {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .home-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+        }
     </style>
 </head>
+
 <body>
-    <?php include('../includes/header.php'); ?>
     <section class="section-padding">
-    
+
         <div class="container2">
             <h2>Create Account</h2>
-            
+
             <?php if ($success): ?>
                 <div class="success"><?php echo $success; ?></div>
             <?php endif; ?>
@@ -168,8 +197,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <form method="POST" action="">
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username" 
-                        value="<?php echo htmlspecialchars($username ?? ''); ?>" 
+                    <input type="text" id="username" name="username"
+                        value="<?php echo htmlspecialchars($username ?? ''); ?>"
                         required>
                     <?php if (isset($errors['username'])): ?>
                         <span class="error"><?php echo $errors['username']; ?></span>
@@ -178,8 +207,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" 
-                        value="<?php echo htmlspecialchars($email ?? ''); ?>" 
+                    <input type="email" id="email" name="email"
+                        value="<?php echo htmlspecialchars($email ?? ''); ?>"
                         required>
                     <?php if (isset($errors['email'])): ?>
                         <span class="error"><?php echo $errors['email']; ?></span>
@@ -208,8 +237,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="login-link">
                 Already have an account? <a href="login.php">Login here</a>
             </div>
-        </div>
+            <div class="home-link">
+                <a href="/">Back to Website</a>
+
+            </div>
     </section>
-    <?php include('../includes/footer.php'); ?>
 </body>
+
 </html>

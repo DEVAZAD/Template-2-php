@@ -4,6 +4,8 @@
             <div class="footer-column">
                 <h3>Abcel</h3>
                 <p>Transforming communities through education, empowerment, and sustainable development.</p>
+                <p>Transforming communities through education, empowerment, and sustainable development.</p>
+
             </div>
             <div class="footer-column">
                 <h4>Quick Links</h4>
