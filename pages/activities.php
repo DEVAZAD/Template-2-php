@@ -27,7 +27,7 @@ $page_title = "Activities";
             padding: 0 150px;
         }
 
-        p {
+        .container p {
             text-align: center;
             font-size: 18px;
             color: #666;

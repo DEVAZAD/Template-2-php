@@ -4,6 +4,7 @@
             <div>
                 <a href="/" class="logo">
                     <img src="/assets/logo.png" alt="ABCEL Logo">
+
                     <h2>ABCEL</h2>
                 </a>
             </div>

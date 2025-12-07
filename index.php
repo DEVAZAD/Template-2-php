@@ -222,16 +222,7 @@
             <?php include 'includes/counterup.php' ?>
         </section>
 
-        <!-- Focus Section -->
-        <section class="focus-section section-padding">
 
-            <h1>Our Focus Areas for Community Development</h1>
-            <p>We target specific areas where intervention can create the most significant and lasting impact.</p>
-            <div class="focus-image">
-                <div class="image-placeholder-large"></div>
-            </div>
-
-        </section>
 
         <!-- Join Movement Section -->
         <section class="join-section section-padding">

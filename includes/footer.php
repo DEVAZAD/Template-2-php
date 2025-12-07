@@ -4,8 +4,6 @@
             <div class="footer-column">
                 <h3>Abcel</h3>
                 <p>Transforming communities through education, empowerment, and sustainable development.</p>
-                <p>Transforming communities through education, empowerment, and sustainable development.</p>
-
             </div>
             <div class="footer-column">
                 <h4>Quick Links</h4>
@@ -18,13 +16,15 @@
             </div>
             <div class="footer-column">
                 <h4>Contact Us</h4>
-                <p>Email: info@abcel.org</p>
-                <p>Phone: +1 (555) 123-4567</p>
-                <p>Address: 123 Community Street, City, Country</p>
+                <ul>
+                    <li>Email: info@abcel.org</li>
+                    <li>Phone: +1 (555) 123-4567</li>
+                    <li>Address: 123 Community Street, City, Country</li>
+                </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2023 ABCEL. All rights reserved.</p>
+            <p>&copy; 2025 ABCEL. All rights reserved.</p>
         </div>
     </div>
 </footer>
