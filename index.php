@@ -144,28 +144,29 @@
             <div class="grid team-container">
                 <div class="card">
                     <img src="/assets/client.png" alt="" class="team-photo">
-                    <h3>Alice Johnson</h3>
+                    <h3>Human North</h3>
                     <h4>Founder & Director</h4>
                     <p>From Pangin Town, Shri Tasung Taki plays an important role in promoting cultural awareness and assisting in the organiza...</p>
                 </div>
                 <div class="card">
                     <img src="/assets/client.png" alt="" class="team-photo">
-                    <h3>Michael Smith</h3>
+                    <h3>Human South</h3>
                     <h4>Head of Research</h4>
                     <p>A committed member from Komsing Village, Shri John Taki supports the society’s ongoing programs and cultural research....</p>
                 </div>
                 <div class="card">
                     <img src="/assets/client.png" alt="" class="team-photo">
-                    <h3>Sophia Lee</h3>
-                    <h4>Member</h4>
-                    <p>Representing Komsing Village, Shri Nong Tamuk assists in managing communications and documentation within the society. H...</p>
-                </div>
-                <div class="card">
-                    <img src="/assets/client.png" alt="" class="team-photo">
-                    <h3>David Brown</h3>
+                    <h3>Human West</h3>
                     <h4>Digital Archivist</h4>
                     <p>As the Convener from Pangin Town, Shri Jun Taki coordinates events, meetings, and cultural programs. His organizational ...</p>
                 </div>
+                <div class="card">
+                    <img src="/assets/client.png" alt="" class="team-photo">
+                    <h3>Human East</h3>
+                    <h4>Member</h4>
+                    <p>Representing Komsing Village, Shri Nong Tamuk assists in managing communications and documentation within the society...</p>
+                </div>
+
             </div>
 
 

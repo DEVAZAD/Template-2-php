@@ -171,6 +171,9 @@ h4 {
   gap: 30px;
   margin-bottom: 40px;
 }
+.team-container .card {
+  height: 350px;
+}
 
 .team-container h4 {
   margin-top: 10px;
