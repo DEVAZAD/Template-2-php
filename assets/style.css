@@ -7,7 +7,7 @@
 
 :root {
   --background: #f8fbff;
-  --primary: #1a73e8;
+  --primary: #e84e1a;
   --dark: #202124;
   --light: #ffffff;
   --gray: #5f6368;
@@ -393,7 +393,7 @@ h4 {
 }
 
 .contact-form button:hover {
-  background: #0d62d9;
+  background: #d84416;
   transform: translateY(-1px);
 }
 /* Right side: contact info */
@@ -432,7 +432,7 @@ h4 {
 }
 
 .social-icons svg:hover {
-  fill: #0d62d9;
+  fill: var(--primary);
   transform: translateY(-3px);
 }
 
@@ -468,7 +468,7 @@ h4 {
     margin-top: 1.5rem;
   }
   .container {
-    padding: 0 35px;
+    padding: 0 30px;
   }
 
   .opportunities-container,

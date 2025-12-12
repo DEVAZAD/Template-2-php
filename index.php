@@ -59,7 +59,7 @@
                     <p>
                         DSCPS is committed to safeguarding indigenous knowledge, traditions, and practices through collaborative research, cultural documentation, and educational initiatives that empower communities to maintain their cultural identity. </p>
                 </div>
-                <div class="grid">
+                <div class="grid vision-mission-cards">
                     <div class="card">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" class="lucide lucide-users h-8 w-8 mx-auto mb-4 text-primary">
                             <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
