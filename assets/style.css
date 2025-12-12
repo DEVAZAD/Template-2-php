@@ -467,22 +467,6 @@ h4 {
   .contact-info {
     margin-top: 1.5rem;
   }
-}
-
-/* ================== Animations ================== */
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* ================== Responsive ================== */
-
-@media screen and (max-width: 1024px) {
   .container {
     padding: 0 35px;
   }
@@ -511,5 +495,16 @@ h4 {
   a,
   li {
     font-size: 1rem;
+  }
+}
+
+/* ================== Animations ================== */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
