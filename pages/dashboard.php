@@ -3,14 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-/*
- IMPORTANT RULE:
- session_start() must be called ONLY ONCE.
- If db.php already has session_start(), REMOVE it from here.
-*/
 
-// REMOVE this if db.php already starts the session
-// session_start();
 
 require '../processes/db.php';
 
@@ -47,13 +40,7 @@ $role   = $_SESSION['role'] ?? 'client'; // SAFE fallback
 
         <!-- TEMPORARY NOTE -->
         <p><em>Site creation disabled until tables exist.</em></p>
-
-        <!--
-        DO NOT RUN THIS YET
-        Because:
-        - templates table does NOT exist
-        - sites table may NOT exist
-        -->
+        <p>You are logged in as an admin.</p>
     </div>
 
 <?php else: ?>
