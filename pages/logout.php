@@ -1,5 +1,5 @@
 <?php
-require_once '../processes/authentication_process.php';
+require_once '../processes/db.php';
 
 
 // Destroy all session data

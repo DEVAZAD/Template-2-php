@@ -1,83 +1,119 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+require_once '../processes/db.php';
 
-
-
-require '../processes/db.php';
-
-/* ---------- AUTH CHECK ---------- */
-if (!isset($_SESSION['user_id'])) {
-    header("Location: ../login.php");
-    exit;
+// Redirect to login if not authenticated
+if (!is_logged_in()) {
+    redirect('login.php');
 }
 
-$userId = $_SESSION['user_id'];
-$role   = $_SESSION['role'] ?? 'client'; // SAFE fallback
+$username = $_SESSION['username'];
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <style>
-        body { font-family: Arial; padding: 20px; }
-        .box { border: 1px solid #ccc; padding: 15px; margin-bottom: 15px; }
-        .admin { background: #f5f5f5; }
-        .client { background: #eef7ff; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background: #007bff;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container2 {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .btn {
+            padding: 0.5rem 1rem;
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn:hover {
+            background: #c82333;
+        }
+
+        .left-sidebar{
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            padding-top: 20px;
+        }
+        .sidebar-menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar-menu ul li {
+            padding: 10px 20px;
+            border-bottom: 1px solid #444;
+        }
+        .sidebar-menu ul li:hover {
+            background-color: #444;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div>
+            <a href="/pages/dashboard.php" class="logo" style="display: flex;">
+                <img src="../assets/client/logo.png" alt="Logo" style="height:40px;">
+                <h2>Welcome, <?php echo htmlspecialchars($username); ?>!</h2>
+            </a>
+        </div>
+        
 
-<h2>Dashboard</h2>
+        <a href="logout.php" class="btn">Logout</a>
+    </nav>
 
-<?php if ($role === 'admin'): ?>
+    <div class="left-sidebar">
+        <div class="sidebar-menu">
+            <ul class="links">
+                <li>Dashboard</li>
+                <li>Add new site</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+            </ul>
+        </div>
 
-    <!-- ================= ADMIN DASHBOARD ================= -->
-    <div class="box admin">
-        <h3>Admin Panel</h3>
-
-        <!-- TEMPORARY NOTE -->
-        <p><em>Site creation disabled until tables exist.</em></p>
-        <p>You are logged in as an admin.</p>
     </div>
-
-<?php else: ?>
-
-    <!-- ================= CLIENT DASHBOARD ================= -->
-    <div class="box client">
-        <h3>Client Panel</h3>
-        <p>You are logged in as a client.</p>
-
-        <?php
-        /*
-         This query FAILS if `sites` table does not exist.
-         So we guard it.
-        */
-
-        try {
-            $stmt = $pdo->prepare("SELECT * FROM sites WHERE user_id = ?");
-            $stmt->execute([$userId]);
-            $site = $stmt->fetch();
-
-            if ($site) {
-                echo "<p><strong>Site Name:</strong> " . htmlspecialchars($site['site_name']) . "</p>";
-                echo "<p><strong>Status:</strong> " . htmlspecialchars($site['status']) . "</p>";
-            } else {
-                echo "<p>No site assigned yet.</p>";
-            }
-
-        } catch (PDOException $e) {
-            echo "<p><strong>Note:</strong> Sites table not created yet.</p>";
-        }
-        ?>
+    <div class="container2">
+        <h2>Dashboard</h2>
+        <p>You have successfully logged in to your account.</p>
+        <p>This is a protected page that only logged-in users can access.</p>
+        
+        <div style="margin-top: 2rem;">
+            <h3>Your Account Information</h3>
+            <p><strong>Username:</strong> <?php echo htmlspecialchars($username); ?></p>
+            <p><strong>User ID:</strong> <?php echo $_SESSION['user_id']; ?></p>
+            <p><strong>Login Time:</strong> <?php echo date('Y-m-d H:i:s'); ?></p>
+        </div>
     </div>
-
-<?php endif; ?>
-
-<br>
-<a href="../logout.php">Logout</a>
-
 </body>
 </html>

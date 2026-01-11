@@ -2,7 +2,6 @@
 require_once '../processes/db.php';
 
 
-
 // Redirect if already logged in
 if (is_logged_in()) {
     redirect('dashboard.php');
