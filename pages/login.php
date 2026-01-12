@@ -1,52 +1,71 @@
 <?php
 require_once '../processes/db.php';
 
-
-// Redirect if already logged in
-if (is_logged_in()) {
-    redirect('dashboard.php');
+/*
+If user is already logged in, send them to dashboard
+*/
+if (isset($_SESSION['user_id'])) {
+    header('Location: dashboard.php');
+    exit;
 }
 
 $errors = [];
+$username = '';
 
+/*
+Handle Login
+*/
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = sanitize_input($_POST['username'] ?? '');
+
+    $username = trim($_POST['username'] ?? '');
     $password = $_POST['password'] ?? '';
 
     // Validation
-    if (empty($username)) {
-        $errors['username'] = 'Username is required';
+    if ($username === '') {
+        $errors['username'] = 'Username or email is required';
     }
 
-    if (empty($password)) {
+    if ($password === '') {
         $errors['password'] = 'Password is required';
     }
 
-    // Authenticate user
+    // Authenticate
     if (empty($errors)) {
         try {
-            $stmt = $pdo->prepare("SELECT id, username, password_hash FROM users WHERE username = ? OR email = ?");
+            $stmt = $pdo->prepare(
+                "SELECT id, username, password_hash, role
+                 FROM users
+                 WHERE username = ? OR email = ?
+                 LIMIT 1"
+            );
             $stmt->execute([$username, $username]);
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($user && password_verify($password, $user['password_hash'])) {
-                // Login successful
-                $_SESSION['user_id'] = $user['id'];
-                $_SESSION['username'] = $user['username'];
 
-                // Regenerate session ID for security
+                // Prevent session fixation
                 session_regenerate_id(true);
 
-                redirect('dashboard.php');
+                // Store session data
+                $_SESSION['user_id']   = $user['id'];
+                $_SESSION['username']  = $user['username'];
+                $_SESSION['role']      = $user['role'];
+                $_SESSION['login_time'] = time();
+
+                // Redirect to dashboard
+                header('Location: dashboard.php');
+                exit;
             } else {
                 $errors['general'] = 'Invalid username/email or password';
             }
         } catch (PDOException $e) {
-            $errors['general'] = 'Login error: ' . $e->getMessage();
+            // Do NOT expose DB error in production
+            $errors['general'] = 'Something went wrong. Please try again.';
         }
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

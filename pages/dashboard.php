@@ -1,13 +1,20 @@
 <?php
 require_once '../processes/db.php';
 
-// Redirect to login if not authenticated
-if (!is_logged_in()) {
-    redirect('login.php');
+/*
+Redirect to login if not authenticated
+*/
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit;
 }
 
-$username = $_SESSION['username'];
+
+$username = $_SESSION['username'] ?? 'User';
+$role     = $_SESSION['role'] ?? 'client';
+$loginAt  = $_SESSION['login_time'] ?? time();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -120,6 +127,7 @@ $username = $_SESSION['username'];
 
     </div>
     <div class="container2">
+
         <h2>Dashboard</h2>
         <p>You have successfully logged in to your account.</p>
         <p>This is a protected page that only logged-in users can access.</p>
