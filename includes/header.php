@@ -16,7 +16,7 @@
                 <li><a href="/#partners">Partners</a></li>
                 <li><a href="/#gallery">Gallery</a></li>
                 <li><a href="/#contact">Connect</a></li>
-                <li><a href="/pages/login.php">Login</a></li>
+                <li><a href="/admin/login.php">Login</a></li>
             </ul>
         </div>
         <script>

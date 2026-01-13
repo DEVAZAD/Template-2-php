@@ -80,10 +80,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" /dashboard-includes/header.css">
+    <link rel="stylesheet" href="/dashboard-includes/sidebar.css">
     <title>Create Site</title>
+
 </head>
 
 <body>
+    <!-- Navbar -->
+    <?php include 'dashboard-includes/header.php'; ?>
+    <!-- Sidebar -->
+    <?php include 'dashboard-includes/sidebar.php'; ?>
 
     <h2>Create New Site</h2>
 
