@@ -1,51 +1,44 @@
 <?php
 require_once '../processes/db.php';
 
-/*
-|--------------------------------------------------------------------------
-| Admin Guard
-|--------------------------------------------------------------------------
-*/
+
 if (!isset($_SESSION['user_id']) || ($_SESSION['role'] ?? '') !== 'admin') {
     header('Location: ../pages/login.php');
     exit;
 }
 
-/*
-|--------------------------------------------------------------------------
-| Fetch all sites
-|--------------------------------------------------------------------------
-*/
-$stmt = $pdo->query("
-    SELECT id, site_slug, title, logo, created_at
-    FROM sites
-    ORDER BY created_at DESC
-");
+
+$username = $_SESSION['username'] ?? 'User';
+$role     = $_SESSION['role'] ?? 'client';
+
+
+$stmt = $pdo->query(
+    "SELECT id, site_slug, title, logo, created_at
+     FROM sites
+     ORDER BY created_at DESC"
+);
 $sites = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <title>Manage Sites</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-        }
+    <link rel="stylesheet" href="dashboard-includes/navbar.css">
+    <link rel="stylesheet" href="dashboard-includes/sidebar.css">
 
-        .container {
-            max-width: 1000px;
-            margin: 2rem auto;
-            background: white;
+    <style>
+        .content {
+            margin-left: 220px;
             padding: 2rem;
-            border-radius: 8px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
+            background: white;
         }
 
         th,
@@ -65,26 +58,35 @@ $sites = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         .btn {
             padding: 6px 12px;
-            text-decoration: none;
             border-radius: 4px;
             font-size: 14px;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-edit {
             background: #007bff;
-            color: white;
+            color: #fff;
         }
 
         .btn-delete {
             background: #dc3545;
-            color: white;
+            color: #fff;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
+    <!-- Header -->
+    <?php include 'dashboard-includes/header.php'; ?>
+
+    <!-- Sidebar -->
+    <?php include 'dashboard-includes/sidebar.php'; ?>
+
+    <!-- Content -->
+    <div class="content">
+
         <h2>Manage Sites</h2>
 
         <?php if (empty($sites)): ?>
@@ -106,8 +108,8 @@ $sites = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <?php foreach ($sites as $site): ?>
                         <tr>
                             <td>
-                                <?php if ($site['logo']): ?>
-                                    <img src="/uploads/logos/<?= htmlspecialchars($site['logo']) ?>">
+                                <?php if (!empty($site['logo'])): ?>
+                                    <img src="/uploads/logos/<?= htmlspecialchars($site['logo']) ?>" alt="Logo">
                                 <?php endif; ?>
                             </td>
 
@@ -123,7 +125,7 @@ $sites = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                                 <a class="btn btn-delete"
                                     href="delete-site.php?id=<?= (int)$site['id'] ?>"
-                                    onclick="return confirm('Delete this site?')">
+                                    onclick="return confirm('Are you sure you want to delete this site?')">
                                     Delete
                                 </a>
                             </td>
@@ -133,6 +135,7 @@ $sites = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </table>
 
         <?php endif; ?>
+
     </div>
 
 </body>
