@@ -16,21 +16,23 @@ ini_set('display_errors', 1);
 try {
     $pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASS);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e) {
+} catch (PDOException $e) {
     die("Connection failed: " . $e->getMessage());
 }
 
 // Include helper functions
-function sanitize_input($data) {
+function sanitize_input($data)
+{
     return htmlspecialchars(strip_tags(trim($data)));
 }
 
-function redirect($url) {
+function redirect($url)
+{
     header("Location: $url");
     exit;
 }
 
-function is_logged_in() {
+function is_logged_in()
+{
     return isset($_SESSION['user_id']);
 }
-?>
