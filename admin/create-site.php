@@ -1,35 +1,23 @@
 <?php
 require_once '../processes/db.php';
 
-/*
-|--------------------------------------------------------------------------
-| Admin Authentication Guard
-|--------------------------------------------------------------------------
-*/
+
 if (!isset($_SESSION['user_id']) || ($_SESSION['role'] ?? '') !== 'admin') {
     header('Location: ../pages/login.php');
     exit;
 }
 
-/*
-|--------------------------------------------------------------------------
-| Shared variables for header / sidebar
-|--------------------------------------------------------------------------
-*/
+
 $username = $_SESSION['username'] ?? 'User';
 $role     = $_SESSION['role'] ?? 'client';
 
 $errors  = [];
 $success = '';
 
-/*
-|--------------------------------------------------------------------------
-| Handle Form Submission
-|--------------------------------------------------------------------------
-*/
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    /* Read inputs */
+
     $title = trim($_POST['title'] ?? '');
     $rawSlug = trim($_POST['slug'] ?? '');
     $desc  = trim($_POST['description'] ?? '');
@@ -37,16 +25,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email'] ?? '');
     $fb    = trim($_POST['facebook'] ?? '');
 
-    /* Basic validation */
+
     if ($title === '' || $rawSlug === '') {
         $errors[] = 'Title and Site URL are required';
     }
 
-    /*
-    |--------------------------------------------------------------------------
-    | Normalize slug (abc.com → abc)
-    |--------------------------------------------------------------------------
-    */
+
     $slug = strtolower($rawSlug);
     $slug = preg_replace('#^https?://#', '', $slug);
     $slug = preg_replace('#^www\.#', '', $slug);
@@ -56,11 +40,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = 'Invalid site URL format';
     }
 
-    /*
-    |--------------------------------------------------------------------------
-    | Check slug uniqueness
-    |--------------------------------------------------------------------------
-    */
     if (empty($errors)) {
         $stmt = $pdo->prepare(
             "SELECT 1 FROM sites WHERE site_slug = ? LIMIT 1"
@@ -72,11 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    /*
-    |--------------------------------------------------------------------------
-    | Upload directories
-    |--------------------------------------------------------------------------
-    */
     $logoDir    = __DIR__ . '/../uploads/logos/';
     $galleryDir = __DIR__ . '/../uploads/gallery/';
 
@@ -87,11 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         mkdir($galleryDir, 0755, true);
     }
 
-    /*
-    |--------------------------------------------------------------------------
-    | Logo upload (required)
-    |--------------------------------------------------------------------------
-    */
+
     $allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
     $logoName = null;
 
@@ -116,11 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    /*
-    |--------------------------------------------------------------------------
-    | Gallery upload (optional)
-    |--------------------------------------------------------------------------
-    */
+
     $gallery = [];
 
     if (empty($errors) && !empty($_FILES['images']['name'][0])) {
@@ -147,11 +113,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    /*
-    |--------------------------------------------------------------------------
-    | Insert into database
-    |--------------------------------------------------------------------------
-    */
     if (empty($errors)) {
         $stmt = $pdo->prepare(
             "INSERT INTO sites
