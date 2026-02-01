@@ -1,193 +1,138 @@
 <?php
-require_once '../processes/db.php';
-
+require_once '../db.php';
 
 if (!isset($_SESSION['user_id']) || ($_SESSION['role'] ?? '') !== 'admin') {
-    header('Location: ../pages/login.php');
+    header('Location: ../login.php');
     exit;
 }
 
+$errors = [];
+$success = '';
 
-$username = $_SESSION['username'] ?? 'User';
+$username = $_SESSION['username'] ?? 'client';
 $role     = $_SESSION['role'] ?? 'client';
 
-$errors  = [];
-$success = '';
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
+    // Collect inputs
+    $data = [
+        'title'     => trim($_POST['title'] ?? ''),
+        'slug'      => trim($_POST['slug'] ?? ''),
+        'desc'      => trim($_POST['description'] ?? ''),
+        'phone'     => trim($_POST['phone'] ?? ''),
+        'email'     => trim($_POST['email'] ?? ''),
+        'facebook'  => trim($_POST['facebook'] ?? ''),
+        'client_id' => (int) ($_POST['client_id'] ?? 0),
+    ];
 
-    $title = trim($_POST['title'] ?? '');
-    $rawSlug = trim($_POST['slug'] ?? '');
-    $desc  = trim($_POST['description'] ?? '');
-    $phone = trim($_POST['phone'] ?? '');
-    $email = trim($_POST['email'] ?? '');
-    $fb    = trim($_POST['facebook'] ?? '');
-
-
-    if ($title === '' || $rawSlug === '') {
-        $errors[] = 'Title and Site URL are required';
+    // Basic validation
+    if ($data['title'] === '' || $data['slug'] === '' || $data['client_id'] <= 0) {
+        $errors[] = 'Title, URL, and Client are required';
     }
 
-
-    $slug = strtolower($rawSlug);
-    $slug = preg_replace('#^https?://#', '', $slug);
-    $slug = preg_replace('#^www\.#', '', $slug);
+    // Clean slug
+    $slug = strtolower($data['slug']);
+    $slug = preg_replace('#^https?://|^www\.#', '', $slug);
     $slug = explode('.', $slug)[0];
 
     if (!preg_match('/^[a-z0-9-]+$/', $slug)) {
-        $errors[] = 'Invalid site URL format';
+        $errors[] = 'Invalid site URL';
     }
 
-    if (empty($errors)) {
-        $stmt = $pdo->prepare(
-            "SELECT 1 FROM sites WHERE site_slug = ? LIMIT 1"
-        );
-        $stmt->execute([$slug]);
-
+    // One site per client
+    if (!$errors) {
+        $stmt = $pdo->prepare("SELECT 1 FROM sites WHERE client_id = ?");
+        $stmt->execute([$data['client_id']]);
         if ($stmt->fetch()) {
-            $errors[] = 'Site already exists';
+            $errors[] = 'This client already has a site';
         }
     }
 
-    $logoDir    = __DIR__ . '/../uploads/logos/';
-    $galleryDir = __DIR__ . '/../uploads/gallery/';
+    // Optional logo upload
+    $logo = null;
+    if (!empty($_FILES['logo']['name']) && $_FILES['logo']['error'] === UPLOAD_ERR_OK) {
+        $dir = __DIR__ . '/../uploads/logos/';
+        is_dir($dir) || mkdir($dir, 0755, true);
 
-    if (!is_dir($logoDir)) {
-        mkdir($logoDir, 0755, true);
-    }
-    if (!is_dir($galleryDir)) {
-        mkdir($galleryDir, 0755, true);
-    }
-
-
-    $allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
-    $logoName = null;
-
-    if (empty($errors)) {
-
-        if (empty($_FILES['logo']['name'])) {
-            $errors[] = 'Logo is required';
-        } elseif ($_FILES['logo']['error'] !== UPLOAD_ERR_OK) {
-            $errors[] = 'Logo upload failed';
-        } elseif (!in_array($_FILES['logo']['type'], $allowedTypes)) {
-            $errors[] = 'Invalid logo file type';
-        } else {
-            $ext = pathinfo($_FILES['logo']['name'], PATHINFO_EXTENSION);
-            $logoName = uniqid('logo_', true) . '.' . $ext;
-
-            if (!move_uploaded_file(
-                $_FILES['logo']['tmp_name'],
-                $logoDir . $logoName
-            )) {
-                $errors[] = 'Failed to save logo';
-            }
-        }
+        $ext  = pathinfo($_FILES['logo']['name'], PATHINFO_EXTENSION);
+        $logo = uniqid('logo_', true) . '.' . $ext;
+        move_uploaded_file($_FILES['logo']['tmp_name'], $dir . $logo);
     }
 
-
-    $gallery = [];
-
-    if (empty($errors) && !empty($_FILES['images']['name'][0])) {
-
-        foreach ($_FILES['images']['name'] as $i => $name) {
-
-            if ($_FILES['images']['error'][$i] !== UPLOAD_ERR_OK) {
-                continue;
-            }
-
-            if (!in_array($_FILES['images']['type'][$i], $allowedTypes)) {
-                continue;
-            }
-
-            $ext = pathinfo($name, PATHINFO_EXTENSION);
-            $file = uniqid('img_', true) . '.' . $ext;
-
-            if (move_uploaded_file(
-                $_FILES['images']['tmp_name'][$i],
-                $galleryDir . $file
-            )) {
-                $gallery[] = $file;
-            }
-        }
-    }
-
-    if (empty($errors)) {
+    // Insert
+    if (!$errors) {
         $stmt = $pdo->prepare(
             "INSERT INTO sites
-            (site_slug, title, description, logo, phone, email, facebook, images)
+            (site_slug, title, description, logo, phone, email, facebook, client_id)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
         );
 
         $stmt->execute([
             $slug,
-            $title,
-            $desc,
-            $logoName,
-            $phone,
-            $email,
-            $fb,
-            json_encode($gallery)
+            $data['title'],
+            $data['desc'],
+            $logo,
+            $data['phone'],
+            $data['email'],
+            $data['facebook'],
+            $data['client_id']
         ]);
 
-        $success = "Site created successfully. URL: /sites/site.php?site=$slug";
+        $success = 'Site created successfully';
     }
 }
-
 ?>
-
 <!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="UTF-8">
     <title>Create Site</title>
-
-    <link rel="stylesheet" href="dashboard-includes/navbar.css">
-    <link rel="stylesheet" href="dashboard-includes/sidebar.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-light">
 
-    <?php include 'dashboard-includes/header.php'; ?>
-    <?php include 'dashboard-includes/sidebar.php'; ?>
+    <?php include '../dashboard-includes/header.php'; ?>
+    <?php include '../dashboard-includes/sidebar.php'; ?>
 
-    <div style="margin-left:220px;padding:2rem;">
+    <div class="container mt-4" style="padding-left:220px; max-width:700px;">
 
-        <h2>Create New Site</h2>
+        <h3 class="mb-4">Create Site</h3>
 
-        <?php if ($success): ?>
-            <p style="color:green"><?= htmlspecialchars($success) ?></p>
-        <?php endif; ?>
-
-        <?php foreach ($errors as $error): ?>
-            <p style="color:red"><?= htmlspecialchars($error) ?></p>
+        <?php foreach ($errors as $e): ?>
+            <div class="alert alert-danger"><?= htmlspecialchars($e) ?></div>
         <?php endforeach; ?>
 
-        <form method="POST" enctype="multipart/form-data">
+        <?php if ($success): ?>
+            <div class="alert alert-success"><?= $success ?></div>
+        <?php endif; ?>
 
-            <input type="text" name="title" placeholder="Site Title" required><br><br>
+        <form method="POST" enctype="multipart/form-data" class="card p-4 shadow-sm">
 
-            <input type="text" name="slug"
-                placeholder="Site URL (e.g. abc.com)"
-                required><br><br>
+            <div class="mb-3">
+                <label class="form-label">Assign Client</label>
+                <select name="client_id" class="form-select" required>
+                    <option value="">Select Client</option>
+                    <?php
+                    foreach ($pdo->query("SELECT id, username FROM users WHERE role='client'") as $c) {
+                        echo "<option value='{$c['id']}'>{$c['username']}</option>";
+                    }
+                    ?>
+                </select>
+            </div>
 
-            <textarea name="description" placeholder="Description"></textarea><br><br>
+            <input class="form-control mb-3" name="title" placeholder="Site Title" required>
+            <input class="form-control mb-3" name="slug" placeholder="example.com" required>
+            <textarea class="form-control mb-3" name="description" placeholder="Description"></textarea>
+            <input class="form-control mb-3" type="file" name="logo">
+            <input class="form-control mb-3" name="phone" placeholder="Phone">
+            <input class="form-control mb-3" type="email" name="email" placeholder="Email">
+            <input class="form-control mb-3" name="facebook" placeholder="Facebook URL">
 
-            <input type="file" name="logo" required><br><br>
-
-            <input type="text" name="phone" placeholder="Phone"><br><br>
-            <input type="email" name="email" placeholder="Email"><br><br>
-
-            <input type="url" name="facebook" placeholder="Facebook"><br><br>
-
-            <input type="file" name="images[]" multiple><br><br>
-
-            <button type="submit">Create Site</button>
-
+            <button class="btn btn-primary w-100">Create Site</button>
         </form>
-
     </div>
 
 </body>

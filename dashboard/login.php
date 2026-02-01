@@ -1,5 +1,5 @@
 <?php
-require_once 'admin/db.php';
+require_once 'db.php';
 /*
 If user is already logged in, send them to dashboard
 */
@@ -133,7 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="text-center mt-3">
             Don’t have an account?
-            <a href="admin/signup.php" class="text-decoration-none fw-bold" style="color: #34476fff;">
+            <a href="signup.php" class="text-decoration-none fw-bold" style="color: #34476fff;">
                 Sign up here
             </a>
         </div>
