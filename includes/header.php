@@ -3,20 +3,20 @@
         <div class="head-container  flex">
             <div>
                 <a href="/" class="logo">
-                    <img src="/assets/client/logo.png">
+                    <img src="assets/client/logo.png">
                     <h2>ABCEL</h2>
                 </a>
             </div>
             <div class="hamburger">&#9776;</div>
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/#about-us">About Us</a></li>
-                <li><a href="/#activities">Activities</a></li>
-                <li><a href="/#team">Team</a></li>
-                <li><a href="/#partners">Partners</a></li>
-                <li><a href="/#gallery">Gallery</a></li>
-                <li><a href="/#contact">Connect</a></li>
-                <li><a href="/admin/login.php">Login</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#partners">Partners</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Connect</a></li>
+                <li><a href="dashboard/login.php">Login</a></li>
             </ul>
         </div>
         <script>
