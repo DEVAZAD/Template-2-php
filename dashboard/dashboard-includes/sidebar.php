@@ -17,7 +17,7 @@
                 📊 <span>Dashboard</span>
             </a>
 
-            <a href="/project1/dashboard/admin/my-profile.php"
+            <a href=""
                 class="d-flex align-items-center gap-2 px-4 py-2 text-decoration-none text-white rounded"
                 style="margin:4px 12px;">
                 👤 <span>My Profile</span>
@@ -36,7 +36,7 @@
 
 
 
-            <a href="/project1/dashboard/admin/generate-report.php"
+            <a href=""
                 class="d-flex align-items-center gap-2 px-4 py-2 text-decoration-none text-white rounded"
                 style="margin:4px 12px;">
                 📄 <span>Reports</span>
@@ -46,28 +46,24 @@
 
             <a href="/project1/dashboard/client/dashboard.php"
                 class="d-flex align-items-center gap-2 px-4 py-2 text-decoration-none text-white rounded"
-                style="margin:4px 12px; background:rgba(34,197,94,.15);">
+                style="margin:4px 12px;">
                 📊 <span>Dashboard</span>
             </a>
 
-            <a href="/project1/dashboard/client/update-profile.php"
-                class="d-flex align-items-center gap-2 px-4 py-2 text-decoration-none text-white rounded"
-                style="margin:4px 12px;">
-                👤 <span>Update Profile</span>
-            </a>
+
             <a href="/project1/dashboard/client/update-site.php"
                 class="d-flex align-items-center gap-2 px-4 py-2 text-decoration-none text-white rounded"
                 style="margin:4px 12px;">
                 🛠️ <span>Update Site</span>
             </a>
 
-            <a href="/project1/dashboard/client/change-password.php"
+            <a href=""
                 class="d-flex align-items-center gap-2 px-4 py-2 text-decoration-none text-white rounded"
                 style="margin:4px 12px;">
                 🔒 <span>Change Password</span>
             </a>
 
-            <a href="/project1/dashboard/client/messages.php"
+            <a href=""
                 class="d-flex align-items-center gap-2 px-4 py-2 text-decoration-none text-white rounded"
                 style="margin:4px 12px;">
                 ✉️ <span>Messages</span>
