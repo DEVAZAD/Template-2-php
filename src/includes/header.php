@@ -29,8 +29,8 @@ if (!defined('BASE')) {
       <li><a href="<?= BASE ?>/">Home</a></li>
       <li><a href="<?= BASE ?>/#about-us">About Us</a></li>
       <li><a href="<?= BASE ?>/#activities">Activities</a></li>
-      <li><a href="<?= BASE ?>/#team">Team</a></li>
       <li><a href="<?= BASE ?>/#partners">Partners</a></li>
+      <li><a href="<?= BASE ?>/#team">Team</a></li>
       <li><a href="<?= BASE ?>/#gallery">Gallery</a></li>
       <li><a href="<?= BASE ?>/#contact">Connect</a></li>
     </ul>

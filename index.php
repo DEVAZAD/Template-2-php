@@ -1,6 +1,5 @@
 <?php
-// index.php — public homepage
-// BASE and ASSETS are defined inside src/includes/header.php
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +9,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LOGO — Enriching Lives</title>
   <?php
-  // Define BASE early so CSS link works
   $sp = str_replace('\\', '/', $_SERVER['SCRIPT_NAME']);
   $base = rtrim(dirname($sp), '/');
   if ($base === '.') $base = '';
@@ -140,12 +138,12 @@
       <div class="team-grid">
         <?php
         $team = [
-          ['Human North',   'Founder & Director', 'From Pangin Town, plays an important role in promoting cultural awareness and community organisation.'],
-          ['Human South',   'Head of Research',   'A committed member from Komsing Village, supports the society\'s ongoing programs and cultural research.'],
-          ['Human West',    'Digital Archivist',  'Coordinates events, meetings, and cultural programs with strong organisational skills.'],
-          ['Human East',    'Community Lead',     'Represents Komsing Village and manages communications and documentation.'],
-          ['Human Central', 'Program Manager',    'Oversees day-to-day program operations and volunteer coordination.'],
-          ['Human North II', 'Member',             'Assists in field research and documentation of traditional practices.'],
+          ['Shri Tasung Taki','Member', 'From Pangin Town, Shri Tasung Taki plays an important role in promoting cultural awareness and assisting in the organiza...'],
+          ['Shri John Taki','Member','A committed member from Komsing Village, Shri John Taki supports the society’s ongoing programs and cultural research....'],
+          ['Shri Nong Tamuk','Assistant Secretary','Representing Komsing Village, Shri Nong Tamuk assists in managing communications and documentation within the society. H...'],
+          ['Shri Jun Taki','Convener','As the Convener from Pangin Town, Shri Jun Taki coordinates events, meetings, and cultural programs. His organizational ...'],
+          ['Smti Osi Taki', 'Treasurer','A diligent and trusted member from Pangin Town, Smti Osi Taki oversees the financial management of the DSCPS. Her commit...'],
+          ['Shri Kabang Taki', 'Chairman','Based in Pangin Town, Shri Kabang Taki leads the DSCPS with a strong commitment to community development and cultural co...'],
         ];
         foreach ($team as $m): ?>
           <div class="card team-card">
