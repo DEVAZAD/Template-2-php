@@ -7,7 +7,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LOGO — Enriching Lives</title>
+  <title>DSCPS — Enriching Lives</title>
   <?php
   $sp = str_replace('\\', '/', $_SERVER['SCRIPT_NAME']);
   $base = rtrim(dirname($sp), '/');
@@ -30,35 +30,37 @@
       <h1 class="section-title">THE IDEA</h1>
       <div class="grid-auto" style="margin-bottom:36px">
         <div class="card">
-          <div class="idea-icon">&#x1F4A1;</div>
-          <h3>Innovation</h3>
-          <p style="margin-top:8px;color:var(--gray)">Let's Enrich Society by Enriching Lives. One at a time.</p>
+          <div class="idea-icon">&#x1F33F;</div>
+          <h3>Preservation</h3>
+          <p style="margin-top:8px;color:var(--gray)">Protecting age-old tribal cultural heritage from extinction — one tradition at a time.</p>
         </div>
         <div class="card">
           <div class="idea-icon">&#x1F91D;</div>
-          <h3>Collaboration</h3>
-          <p style="margin-top:8px;color:var(--gray)">By inspiring change. One nudge at a time.</p>
+          <h3>Empowerment</h3>
+          <p style="margin-top:8px;color:var(--gray)">Uplifting the socially and economically weaker sections of the society through education and skill-building.</p>
         </div>
         <div class="card">
           <div class="idea-icon">&#x1F331;</div>
-          <h3>Sustainability</h3>
-          <p style="margin-top:8px;color:var(--gray)">By inspiring trust. One experience at a time.</p>
+          <h3>Identity</h3>
+          <p style="margin-top:8px;color:var(--gray)">Reviving a sense of oneness and pride in indigenous tribal heritage across North East India.</p>
         </div>
       </div>
-      <p class="idea-desc">Join us in this journey of exploring the significance and implications of purposeful living for the urban aspirational class.</p>
+      <p class="idea-desc">With the coming of development in tribal areas, the rich cultural heritage of tribal people has been heavily affected by the influence of western culture. DSCPS is dedicatedly working for the preservation of tribal folk art, music, faith and belief systems through vocational training, awareness and skilling programmes.</p>
       <div style="text-align:center;margin-top:24px"><a href="#contact" class="btn btn-primary">Know More</a></div>
     </section>
 
     <!-- About Us -->
     <section class="section-pad" id="about-us">
       <h1 class="section-title">About Us</h1>
-      <p class="section-sub">Preserving cultural heritage through digital documentation and community engagement</p>
+      <p class="section-sub">Donyi Sanggo Culture Preservation Society (DSCPS) — Regd. No. SR/ITA/2299</p>
       <div class="grid-2 about-section">
         <div>
           <h3>Our Vision</h3>
-          <p style="color:var(--gray);line-height:1.8;margin-top:10px;margin-bottom:20px">To preserve and promote the rich cultural heritage of indigenous communities through documentation, education, and community engagement.</p>
+          <p style="color:var(--gray);line-height:1.8;margin-top:10px;margin-bottom:20px">To protect and preserve the cultural heritage of the tribal and provide quality services and opportunities to all strata of life.</p>
           <h3>Our Mission</h3>
-          <p style="color:var(--gray);line-height:1.8;margin-top:10px">DSCPS is committed to safeguarding indigenous knowledge, traditions, and practices through collaborative research and educational initiatives.</p>
+          <p style="color:var(--gray);line-height:1.8;margin-top:10px;margin-bottom:20px">To protect, preserve and document the rich cultural heritage of the tribal from alien doctrines and provide exceptional welfare services to the youth of the society.</p>
+          <h3>Our Goal</h3>
+          <p style="color:var(--gray);line-height:1.8;margin-top:10px">To establish ourselves at the forefront of society to protect and preserve the age-old rich cultural heritage of the tribal from extinction, and to educate and skill the youth for self-reliance.</p>
         </div>
         <div class="vision-cards">
           <div class="card">
@@ -69,7 +71,7 @@
               <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
             </svg>
             <h4>Cultural Documentation</h4>
-            <p style="font-size:.85rem;color:var(--gray);margin-top:6px">Preserving traditional knowledge through modern documentation</p>
+            <p style="font-size:.85rem;color:var(--gray);margin-top:6px">Preserving tribal folk art, music, faith and belief systems through modern documentation</p>
           </div>
           <div class="card">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -77,15 +79,15 @@
               <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path>
             </svg>
             <h4>Community Engagement</h4>
-            <p style="font-size:.85rem;color:var(--gray);margin-top:6px">Building bridges between generations through cultural exchange</p>
+            <p style="font-size:.85rem;color:var(--gray);margin-top:6px">Reaching far-flung interior villages to deliver awareness and skill training</p>
           </div>
           <div class="card">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
               <polyline points="14 2 14 8 20 8"></polyline>
             </svg>
-            <h4>Digital Preservation</h4>
-            <p style="font-size:.85rem;color:var(--gray);margin-top:6px">Using technology to safeguard heritage for future generations</p>
+            <h4>Youth Skilling</h4>
+            <p style="font-size:.85rem;color:var(--gray);margin-top:6px">Building careers and opening employable avenues for tribal youth across the region</p>
           </div>
           <div class="card">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -93,8 +95,8 @@
               <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
               <path d="M2 12h20"></path>
             </svg>
-            <h4>Educational Programs</h4>
-            <p style="font-size:.85rem;color:var(--gray);margin-top:6px">Teaching traditional knowledge and cultural practices</p>
+            <h4>North East Outreach</h4>
+            <p style="font-size:.85rem;color:var(--gray);margin-top:6px">Operating across the whole of North East India since 2004</p>
           </div>
         </div>
       </div>
@@ -103,7 +105,7 @@
     <!-- Activities -->
     <section class="section-pad" id="activities" style="text-align:center">
       <h1 class="section-title">Activities</h1>
-      <p class="section-sub">Discover our ongoing programs and initiatives designed to preserve and promote cultural heritage.</p>
+      <p class="section-sub">Discover our ongoing programmes and initiatives designed to preserve and promote cultural heritage.</p>
       <a href="<?= BASE ?>/src/pages/activities.php" class="btn btn-primary">See All Activities &#x2192;</a>
     </section>
 
@@ -134,16 +136,16 @@
     <!-- Team -->
     <section class="section-pad" id="team">
       <h1 class="section-title">Meet Our Team</h1>
-      <p class="section-sub">Dedicated professionals driving our mission forward</p>
+      <p class="section-sub">Dedicated members driving our mission forward</p>
       <div class="team-grid">
         <?php
         $team = [
-          ['Shri Tasung Taki','Member', 'From Pangin Town, Shri Tasung Taki plays an important role in promoting cultural awareness and assisting in the organiza...'],
-          ['Shri John Taki','Member','A committed member from Komsing Village, Shri John Taki supports the society’s ongoing programs and cultural research....'],
-          ['Shri Nong Tamuk','Assistant Secretary','Representing Komsing Village, Shri Nong Tamuk assists in managing communications and documentation within the society. H...'],
-          ['Shri Jun Taki','Convener','As the Convener from Pangin Town, Shri Jun Taki coordinates events, meetings, and cultural programs. His organizational ...'],
-          ['Smti Osi Taki', 'Treasurer','A diligent and trusted member from Pangin Town, Smti Osi Taki oversees the financial management of the DSCPS. Her commit...'],
-          ['Shri Kabang Taki', 'Chairman','Based in Pangin Town, Shri Kabang Taki leads the DSCPS with a strong commitment to community development and cultural co...'],
+          ['Shri Tasung Taki','Member', 'From Pangin Town, Shri Tasung Taki plays an important role in promoting cultural awareness and assisting in the organisation\'s programmes across the region.'],
+          ['Shri John Taki','Member','A committed member from Komsing Village, Shri John Taki supports the society\'s ongoing programmes and cultural research initiatives.'],
+          ['Shri Nong Tamuk','Assistant Secretary','Representing Komsing Village, Shri Nong Tamuk assists in managing communications and documentation within the society.'],
+          ['Shri Jun Taki','Convener','As the Convener from Pangin Town, Shri Jun Taki coordinates events, meetings, and cultural programmes with strong organisational leadership.'],
+          ['Smti Osi Taki', 'Treasurer','A diligent and trusted member from Pangin Town, Smti Osi Taki oversees the financial management of the DSCPS with commitment and transparency.'],
+          ['Shri Kabang Taki', 'Chairman','Based in Pangin Town, Shri Kabang Taki leads the DSCPS with a strong commitment to community development and the preservation of tribal cultural heritage.'],
         ];
         foreach ($team as $m): ?>
           <div class="card team-card">
@@ -171,8 +173,8 @@
       <div class="grid-2">
         <div class="opp-content">
           <h1>REALM OF CONTEMPORARY OPPORTUNITIES</h1>
-          <p>As India and the world are at the brink of change, there is a surge of contemporary opportunities for individuals and the larger ecosystem.</p>
-          <p>Let's explore the contemporary opportunities.</p>
+          <p>As India and North East in particular are at the brink of change, there is a surge of contemporary opportunities for tribal individuals and the larger ecosystem.</p>
+          <p>DSCPS is working as a torch bearer for educating and skilling the youth to seize these opportunities.</p>
           <a href="#contact" class="btn btn-primary">Know More</a>
         </div>
         <div class="opp-image"></div>
@@ -187,9 +189,9 @@
       <h1>One connection can turn into many.<br>Creating a network of opportunities.</h1>
       <div class="flex mission-container">
         <div class="mission-content">
-          <p>Sharing our thoughts, emotions, and inspirations creates an empathetic space to offer visibility to one another.</p>
-          <p>When we share a nugget like a childhood story or an industry learning, we take the first step toward driving a movement.</p>
-          <p>A movement which transforms the means to a fulfilling day's end — the sparkplug of life.</p>
+          <p>The Donyi Sanggo Culture Preservation Society was founded in 2004 with the objective of working towards the upliftment of socially and economically weaker sections of the society.</p>
+          <p>By preserving the rich traditional cultural heritage of the tribal and educating and skilling the youth, DSCPS is building carriers and opening employable avenues across North East India.</p>
+          <p>Registered under Society Registration Act 1860 (Extension to Arunachal Pradesh Act 1978) and under Niti Ayug No. AR/2022/0329083.</p>
           <h2>Watch this video now</h2>
         </div>
         <div class="video-box">
@@ -213,9 +215,9 @@
       <div class="flex" style="gap:48px;align-items:flex-start">
         <div class="join-img" style="min-width:280px"></div>
         <div class="join-content">
-          <p>"The foundation of the Aditya Birla Group rests upon a philosophy of trusteeship, which imagines corporations as institutions that drive collective prosperity."</p>
-          <p><em>"How does one judge a Company?..."</em></p>
-          <p class="signature">&#8212; Dr. Rajesh Sharma, Chairman</p>
+          <p>"The foundation of the Donyi Sanggo Culture Preservation Society rests upon a philosophy of service — protecting the age-old rich cultural heritage of the tribal society from extinction."</p>
+          <p><em>"Our goal is to be at the forefront of the society, to preserve what our ancestors left us and to ensure our youth can stand tall with pride in their identity."</em></p>
+          <p class="signature">&#8212; Shri Kabang Taki, Chairman, DSCPS</p>
         </div>
       </div>
     </section>
@@ -226,18 +228,18 @@
       <div class="news-grid">
         <div class="news-card">
           <div class="news-img news-img-1"></div>
-          <h3>Education Initiative</h3>
-          <p>Launching our new digital literacy programme for rural youth with 500 participants enrolled.</p>
+          <h3>Visit to Your Village</h3>
+          <p>Continuing our village outreach programme, covering 2–3 villages annually in far-flung interior areas with no proper road or telecom access.</p>
         </div>
         <div class="news-card">
           <div class="news-img news-img-2"></div>
-          <h3>Community Health</h3>
-          <p>Our mobile health clinics have served over 2,000 patients in remote areas this quarter.</p>
+          <h3>Awareness Programme</h3>
+          <p>Raising awareness on Drug Abuse, Alcoholism, Child Marriage and other social issues through audio-video shows in unreached villages.</p>
         </div>
         <div class="news-card">
           <div class="news-img news-img-3"></div>
-          <h3>Environmental Project</h3>
-          <p>Planted 5,000 trees as part of our green communities initiative with local volunteers.</p>
+          <h3>Training & Workshops</h3>
+          <p>Organising training and workshop programmes in collaboration with govt. and non-govt. departments, CBOs and NGOs for knowledge dissemination.</p>
         </div>
       </div>
     </section>
@@ -274,7 +276,7 @@
               <div class="contact-icon">&#x1F4CD;</div>
               <div>
                 <h4>Location</h4>
-                <p>Pangin, Arunachal Pradesh, India</p>
+                <p>Head Office-Pangin, Siang District; Camp Office-Chimpu, Itanagar, Papumpare District, Arunachal Pradesh.</p>
               </div>
             </div>
             <div class="contact-row">
@@ -288,9 +290,10 @@
               <div class="contact-icon">&#x2709;&#xFE0F;</div>
               <div>
                 <h4>Email</h4>
-                <p>info@abcel.com</p>
+                <p>info@dscps.org</p>
               </div>
             </div>
+            
           </div>
           <div class="card">
             <h3 style="margin-bottom:16px">Follow Us</h3>

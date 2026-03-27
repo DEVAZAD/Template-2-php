@@ -2,8 +2,8 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <span>ABCEL</span>
-        <p>Transforming communities through education, empowerment, and sustainable cultural preservation.</p>
+        <span>DSCPS</span>
+        <p>To protect and preserve the cultural heritage of the tribal and provide quality services and opportunities to all strata of life.</p>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
@@ -18,14 +18,14 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
-          <li>info@abcel.org</li>
+          <li>info@dscps.org</li>
           <li>+91 12345 67890</li>
-          <li>Pangin, Arunachal Pradesh, India</li>
+          <li>Head Office-Pangin, Siang District; Camp Office-Chimpu, Itanagar, Papumpare District, Arunachal Pradesh.</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; <?= date('Y') ?> ABCEL. All rights reserved.</p>
+      <p>&copy; <?= date('Y') ?> DSCPS. All rights reserved.</p>
     </div>
   </div>
 </footer>
