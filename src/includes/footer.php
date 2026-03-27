@@ -3,7 +3,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <span>DSCPS</span>
-        <p>To protect and preserve the cultural heritage of the tribal and provide quality services and opportunities to all strata of life.</p>
+        <p>Preserving cultural heritage through digital documentation and community engagement</p>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
