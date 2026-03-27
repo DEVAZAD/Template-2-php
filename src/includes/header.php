@@ -21,8 +21,8 @@ if (!defined('BASE')) {
 <header id="site-header">
   <nav class="nav-inner">
     <a href="<?= BASE ?>/" class="nav-logo">
-      <img src="<?= ASSETS ?>/images/logo.png" alt="ABCEL Logo">
-      <span>LOGO</span>
+      <img src="<?= ASSETS ?>/images/logo.png" alt="DSCPS Logo">
+      <span>DSCPS</span>
     </a>
     <button class="hamburger" aria-label="Menu">&#9776;</button>
     <ul class="nav-links">

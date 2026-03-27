@@ -27,23 +27,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login &#8212; ABCEL</title>
+  <title>Login &#8212; DSCPS</title>
   <link rel="stylesheet" href="<?= ASSETS ?>/css/auth.css">
 </head>
 <body>
 <div class="auth-left">
   <a href="<?= BASE ?>/" class="auth-brand">
     <div class="auth-brand-icon">&#x1F33F;</div>
-    <span class="auth-brand-name">ABCEL</span>
+    <span class="auth-brand-name">DSCPS</span>
   </a>
   <div class="auth-hero">
     <h1>Enriching Lives,<br>One Community<br>at a Time.</h1>
-    <p>Log in to manage sites, track projects, and collaborate across your network.</p>
   </div>
   <div class="auth-features">
     <div class="auth-feature"><div class="auth-feature-icon">&#x1F4CA;</div><div class="auth-feature-text"><strong>Dashboard Insights</strong>Monitor all sites and clients in one place.</div></div>
     <div class="auth-feature"><div class="auth-feature-icon">&#x1F512;</div><div class="auth-feature-text"><strong>Secure Access</strong>Role-based login for admins and clients.</div></div>
-    <div class="auth-feature"><div class="auth-feature-icon">&#x1F30D;</div><div class="auth-feature-text"><strong>Cultural Heritage</strong>Preserving traditions through digital tools.</div></div>
   </div>
 </div>
 <div class="auth-right">

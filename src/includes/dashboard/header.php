@@ -9,7 +9,7 @@ $init  = strtoupper(substr($username ?? 'U', 0, 1));
   <div class="topbar-left">
     <div>
       <div class="topbar-title"><?= htmlspecialchars($title) ?></div>
-      <div class="topbar-breadcrumb">ABCEL &rsaquo; <?= htmlspecialchars($title) ?></div>
+      <div class="topbar-breadcrumb">DSCPS &rsaquo; <?= htmlspecialchars($title) ?></div>
     </div>
   </div>
   <div class="topbar-right">
