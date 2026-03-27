@@ -52,7 +52,7 @@
     <!-- About Us -->
     <section class="section-pad" id="about-us">
       <h1 class="section-title">About Us</h1>
-      <p class="section-sub">Donyi Sanggo Culture Preservation Society (DSCPS) — Regd. No. SR/ITA/2299</p>
+      <p class="section-sub">Donyi Sanggo Culture Preservation Society (DSCPS)</p>
       <div class="grid-2 about-section">
         <div>
           <h3>Our Vision</h3>
